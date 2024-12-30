@@ -1,2 +1,2 @@
 # Blog-page
-A replica of news and blog user interface.
+A replica of news and blog user interface page.
