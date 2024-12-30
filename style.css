@@ -1,0 +1,215 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-top: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.news-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.main-article {
+    flex: 2;
+}
+
+.main-article img {
+    border-radius: 8px;
+    margin-top: 10px;
+    height: 46rem;
+}
+
+.side-news {
+    flex: 1;
+    background-color: #f8f7f7;
+    border-radius: 5px;
+}
+
+.side-news ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-news li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.side-news li:hover {
+    cursor: pointer;
+}
+
+.side-news li:hover img {
+    transform: scale(1.05);
+}
+
+.side-news li p:hover {
+    text-decoration: underline;
+}
+
+.side-news li img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 10px;
+    margin-top: -105px;
+    margin-bottom: -105px;
+}
+
+
+.reviews-section {
+    padding: 20px;
+    text-align: center;
+    background-color: #2a2a2a;
+    position: relative;
+    overflow: hidden;
+}
+
+.reviews-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.review-grid article {
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.review-grid img {
+    width: 220px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.review-grid img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.review-grid div {
+    text-align: left;
+}
+
+.review-grid h3 {
+    margin-top: -70px;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: white;
+    transition: text-decoration 0.3s ease;
+}
+
+.review-grid h3:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.review-grid p {
+    color: #aaa;
+    font-family: "Times New Roman", serif;
+    margin-top: 10rem;
+    margin-bottom: -2rem;
+    margin-right: 5rem;
+    margin-left: -4rem;
+}
+
+
+@media (max-width: 1024px) {
+    .review-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .review-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .main-article img {
+        height: 30rem;
+    }
+
+    .side-news {
+        flex: 1 1 100%;
+        margin-top: 20px;
+    }
+
+    .side-news li img {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .reviews-section h2 {
+        font-size: 1.5rem;
+
+    }
+
+    .review-grid h3 {
+        font-size: 1rem;
+    }
+
+    .review-grid img {
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .review-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .main-article img {
+        height: 20rem;
+    }
+
+    .review-grid img {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .review-grid h3 {
+        font-size: 1.1rem;
+    }
+
+    .side-news {
+        padding: 10px;
+    }
+
+    .side-news li img {
+        width: 120px;
+        height: 80px;
+    }
+}
